@@ -14,7 +14,15 @@ import { HEROES } from './mock.heroes';
 
 export class HeroComponent {
   title = 'Angular 2  Hero Workshop';
+  heroName: String = '';
+  heroID: number;
  // hero: Hero = {id: 1, name: 'Batman'};
   heroes: Hero[] = HEROES;
+
+  changeHero(hero: Hero ): void {
+    console.log('change hero ' + hero.id + ' ' + hero.name);
+    this.heroName = hero.name;
+    this.heroID = hero.id ;
+  }
 }
 
