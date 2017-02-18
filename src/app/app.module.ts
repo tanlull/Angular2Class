@@ -26,6 +26,6 @@ import { DashboardComponent } from './dashboard.component';
     ])
   ],
   providers: [],
-  bootstrap: [DashboardComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
