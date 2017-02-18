@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Hero } from './hero';
 
 @Component({
@@ -8,9 +8,13 @@ import { Hero } from './hero';
         <label>name: </label>{{varHero.name}}</div> `
 })
 
-export class HeroDetailComponent{
+export class HeroDetailComponent implements OnInit{
+    ngOnInit() {
+        this.varHero = new Hero(22, 'xxxx');
+    }
+
     @Input()
-    varHero: Hero = new Hero();
+    varHero: Hero;// = new Hero(1, 'Test');
 
     @Input()
     detailTitle: String;

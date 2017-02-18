@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { HeroComponent } from './hero.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { DashboardComponent } from './dashboard.component';
+import { AddFormComponent } from './add-form.component';
+import { HeroService } from './hero.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroComponent,
     HeroDetailComponent,
-    DashboardComponent
+    DashboardComponent,
+    AddFormComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +29,7 @@ import { DashboardComponent } from './dashboard.component';
         {path: 'heroes',  component: HeroComponent}
     ])
   ],
-  providers: [],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,5 @@
+<form #addForm="ngForm" (ngSubmit)=addHero(addForm)>
+  <label for="hero">Hero Name: </label>
+  <input type="text" name="name" id="name" ngModel>
+  <button type="submit">Add</button>
+</form>

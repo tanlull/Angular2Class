@@ -1,3 +1,5 @@
+<app-add-form></app-add-form>
+
 <h2>---- {{title}}----</h2>
 <ul class="heroes">
   <li *ngFor="let hero of heroes" (click)=changeHero(hero)>
@@ -5,5 +7,5 @@
   </li>
 </ul>
 
-<app-hero-detail [detailTitle]=title [varHero]=hero> </app-hero-detail >
+<app-hero-detail [detailTitle]=title [varHero]=hero> </app-hero-detail>
 
